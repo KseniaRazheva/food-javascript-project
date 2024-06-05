@@ -295,4 +295,108 @@ window.addEventListener('DOMContentLoaded', function() {
 //
 //
 //
+// function setOptions(height, width, ...additional) {
+//     console.log(height, width, ...additional)
+// }
+// setOptions(400, 500, 'red', 'top');//400 500 red top
+// 
+// 'use strict';
+// function getSum(a, b) {
+//     function sum() {
+//         console.log(this.a);
+//         return a + b;
+//     }
+//     console.log(sum());
+// }
+// getSum(4, 5);//ничего, будет ошибка в виз дат а
+// 
+//Делегирование событий - это прием, который позволяет...
+//уменьшить количество обработчиков событий, 
+//проще взаимодействовать с DOM-деревом, легко работать с неограниченным количеством элементов в родителе
+// 
+// class Slider {
+//     constructor(width, height) {
+//         this.width = width;
+//         this.height = height;
+//     }
+//     showSliderWidth() {
+//         console.log(this.width);
+//     }
+// }
+// const slider = new Slider('500px', '150px');
+// slider.showSliderWidth();//500px
+// 
+// // Какого метода не существует у свойства classList?
+// //Атрибут class – уникален: ему соответствует аж целых два свойства!
+// //Работать с классами как со строкой неудобно. Поэтому, кроме className, в современных браузерах есть свойство classList.
+// //Свойство classList – это объект для работы с классами.
+// //Методы classList:
+// elem.classList.contains("class") // возвращает true/false, в зависимости от того, есть ли у элемента класс class.
+// elem.classList.add/remove("class") // добавляет/удаляет класс class
+// elem.classList.toggle("class") // если класса class нет, добавляет его, если есть – удаляет.
+// // Кроме того, можно перебрать классы через for, так как classList – это псевдо-массив.
+// //Например:
+//     // var classList = document.body.classList;
+//     // classList.remove('page'); // удалить класс
+//     // classList.add('post'); // добавить класс
+//     // for (var i = 0; i < classList.length; i++) { // перечислить классы
+//     //   alert( classList[i] ); // main, затем post
+//     // }
+//     // alert( classList.contains('post') ); // проверить наличие класса
+//     // alert( document.body.className ); // main post, тоже работает
+// // в итоге ответ: есть методы contains, add, remove, toggle, нет метода includes
+//
+//какое свойство отвечает за ширину элемента, включая только сам контент и паддинг? clientWodth это обсуждалось в лекции Параметры документа, окна и работа с ними
+//
+//как правильно задать наследование одного класса от другого
+//class Slider extends Element {}
+//
+//В чем ключевая разница между методами call и apply
+//кол принимает аргументы через запятую (в виде строки)
+//аплай принимает аргументы в виде массива
+//
+// const urlObj = {
+//     protocol: 'https',
+//     domain: 'mysite.com',
+//     showCurrentURL: function() {
+//         const extractCurrDomain = () => {
+//             return this.domain;
+//         }
+//         const extractCurrProtocol = () => {
+//             return this.protocol;
+//         }
+//         console.log(`${extractCurrProtocol()}://${extractCurrDomain()}`)
+//     }
+// }
+// urlObj.showCurrentURL();//https://mysite.com
+//
+// const urlObj = {
+//     protocol: 'https',
+//     domain: 'mysite.com'
+// }
+// function showCurrentURL() {
+//     const extractCurrDomain = () => {
+//         return this.domain;
+//     }
+//     const extractCurrProtocol = () => {
+//         return this.protocol;
+//     }
+//     console.log(`${extractCurrProtocol()}://${extractCurrDomain()}`)
+// }
+// const url = showCurrentURL.bind(urlObj);
+// console.log(url);//[Function: bound showCurrentURL] или вывод самой функции
+// //bind возвращает новую функцию
+//
+//свойство объекта события event.code позволяет получить
+//код физической клавиши, которая была нажата. вне зависимости от зажатых клавиш shift или alt (урок создаем модальное окно)
+//
+//для чего необходимо сохранять уникальный идентификатор таймера
+//const timerId = setInterval(func, 2000);
+//для того, чтобы иметь возможность остановить этот конкретный таймер
+//(это обсуждалось в уроке про setTimeout и setInterval)
+
+
+
+
+//
 });
