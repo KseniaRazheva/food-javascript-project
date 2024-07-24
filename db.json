@@ -1,5 +1,1 @@
-[
-	{ "id": 1, "name": "John" },
-	{ "id": 2, "name": "Jack" },
-	{ "id": 3, "name": "Alex" }
-]
+[{"id":1,"name":"John"},{"id":2,"name":"Jack"},{"id":3,"name":"Alex"},{"id":4,"name":"asd","phone":"+7 (921) 300 5764"}]
