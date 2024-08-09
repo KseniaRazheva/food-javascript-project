@@ -12,11 +12,11 @@ app.get("/", (req, res) => {
 	res.sendFile(path.join(__dirname, "src", "index.html"));
 });
 
-app.get("/get-data", (req, res) => {
-	fs.readFile("db.json", (error, data) => {
+app.get("/get-data", async (req, res) => {
+	const data = await fs.readFile("db.json", (error, data) => {
 		if (error) res.send("error readFile");
-		res.send(data.toString());
 	});
+	res.send(data.toString());
 });
 
 app.post("/submit", async (req, res) => {
